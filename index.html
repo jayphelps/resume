@@ -8,6 +8,20 @@
       margin: 0;
     }
 
+    noscript,
+    #error {
+      color: red;
+      font-size: 18px;
+      font-weight: bold;
+      text-align: center;
+      white-space: pre;
+    }
+
+    #error {
+      padding: 100px;
+      display: none;
+    }
+
     .wasm-banner {
       background-color: #ffeec8;
       padding: 10px;
@@ -75,6 +89,26 @@
   </style>
 </head>
 <body>
+  <noscript>
+    Sorry, this resume requires JavaScript because it's also a demo of WebAssembly.
+  </noscript>
+  <div id="error">An unknown error occured.</div>
+  <script>
+    function escapeHTML(str){
+      var p = document.createElement('p');
+      p.appendChild(document.createTextNode(str));
+      return p.innerHTML;
+    }
+    function showError(e) {
+      var msg = 'Error: ' + escapeHTML(e.message) + '\n\n You can view Jay\'s resume here: <a href="https://www.linkedin.com/in/phelpsjay">https://www.linkedin.com/in/phelpsjay</a>';
+      var el = document.getElementById('error');
+      el.innerHTML = msg;
+      el.style.display = 'block';
+    }
+    window.onerror = function (message, source, lineno, colno, e) {
+      showError(e);
+    };
+  </script>
   <script src="./main.js"></script>
 </body>
 </html>

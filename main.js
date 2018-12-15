@@ -1,3 +1,7 @@
+if (typeof WebAssembly === 'undefined') {
+  throw new Error('Sorry, your browser doesn\'t support WebAssembly.');
+}
+
 function stringForIndex(heap, strIndex) {
   let str = '';
   // null terminated C-style strings for simplicity
@@ -58,6 +62,13 @@ const imports = {
   }
 };
 
-WebAssembly.instantiateStreaming(fetch('./main.wasm'), imports).then(result => {
-  result.instance.exports.main();
-});
+// Safari doesn't support instantiateStreaming
+if (typeof WebAssembly.instantiateStreaming === 'function') {
+  WebAssembly.instantiateStreaming(fetch('./main.wasm'), imports)
+    .then(result => result.instance.exports.main(), showError);
+} else {
+  fetch('./main.wasm')
+    .then(resp => resp.arrayBuffer())
+    .then(buffer => WebAssembly.instantiate(buffer, imports))
+    .then(result => result.instance.exports.main(), showError);
+}

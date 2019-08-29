@@ -203,6 +203,15 @@
     (call $Element::appendChild
       (get_local $ol)
       (call $createExperienceItem
+        (get_global $jobCompanyCitadel)
+        (get_global $jobTitleCitadel)
+        (get_global $jobDateCitadel)
+        (get_global $jobDescCitadel)
+      )
+    )
+    (call $Element::appendChild
+      (get_local $ol)
+      (call $createExperienceItem
         (get_global $jobCompany1)
         (get_global $jobTitle1)
         (get_global $jobDate1)
@@ -611,6 +620,10 @@
   (global $sourceCodeUrlText i32 (i32.const 2234))
   (global $jobTitle1 i32 (i32.const 2288))
   (global $jobDate1 i32 (i32.const 2299))
+  (global $jobTitleCitadel i32 (i32.const 2355))
+  (global $jobCompanyCitadel i32 (i32.const 2380))
+  (global $jobDateCitadel i32 (i32.const 2404))
+  (global $jobDescCitadel i32 (i32.const 2423))
 
   (data (i32.const 2) "div\00")
   (data (i32.const 6) "a\00")
@@ -678,5 +691,9 @@
   (data (i32.const 2204) "https://medium.com/@jayphelps\00")
   (data (i32.const 2234) "https://github.com/jayphelps/_/blob/gh-pages/main.wat\00")
   (data (i32.const 2288) "Co-founder\00")
-  (data (i32.const 2299) "June 2017 (part-time) - Feb 2018 (full-time) - Dec 2018\00")
+  (data (i32.const 2299) "June 2017 (part-time) - Feb 2018 (full-time) - Jan 2019\00")
+  (data (i32.const 2355) "Senior Software Engineer\00")
+  (data (i32.const 2380) "Citadel Securities, LLC\00")
+  (data (i32.const 2404) "May 2019 - Present\00")
+  (data (i32.const 2423) "Core Architecture team. Insights, tools, libraries, infrastructure, Developer Experience.\00")
 )

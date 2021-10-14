@@ -203,6 +203,15 @@
     (call $Element::appendChild
       (get_local $ol)
       (call $createExperienceItem
+        (get_global $jobCompanyOutsmartly)
+        (get_global $jobTitleOutsmartly)
+        (get_global $jobDateOutsmartly)
+        (get_global $jobDescOutsmartly)
+      )
+    )
+    (call $Element::appendChild
+      (get_local $ol)
+      (call $createExperienceItem
         (get_global $jobCompanyCitadel)
         (get_global $jobTitleCitadel)
         (get_global $jobDateCitadel)
@@ -361,6 +370,13 @@
     (call $Element::appendChild
       (get_local $section)
       (get_local $ol)
+    )
+    (call $Element::appendChild
+      (get_local $ol)
+      (call $createTalkItem
+        (get_global $talkTitle4)
+        (get_global $talkHref4)
+      )
     )
     (call $Element::appendChild
       (get_local $ol)
@@ -623,7 +639,13 @@
   (global $jobTitleCitadel i32 (i32.const 2355))
   (global $jobCompanyCitadel i32 (i32.const 2380))
   (global $jobDateCitadel i32 (i32.const 2404))
-  (global $jobDescCitadel i32 (i32.const 2423))
+  (global $jobDescCitadel i32 (i32.const 2424))
+  (global $jobTitleOutsmartly i32 (i32.const 2514))
+  (global $jobCompanyOutsmartly i32 (i32.const 2544))
+  (global $jobDateOutsmartly i32 (i32.const 2561))
+  (global $jobDescOutsmartly i32 (i32.const 2582))
+  (global $talkTitle4 i32 (i32.const 2833))
+  (global $talkHref4 i32 (i32.const 2869))
 
   (data (i32.const 2) "div\00")
   (data (i32.const 6) "a\00")
@@ -645,8 +667,8 @@
   (data (i32.const 175) "resume-left-column\00")
   (data (i32.const 194) "resume-right-column\00")
   (data (i32.const 214) "Jay Phelps\00")
-  (data (i32.const 225) "hello@jayphelps.com - Knoxville, TN\00")
-  (data (i32.const 261) "Reactive Programming expert, compiler enthusiast, open source contributor, and speaker. WebAssembly Community Group member. Google Developer Expert. Author of core-decorators, co-author of redux-observable, and RxJS core team alum.\00")
+  (data (i32.const 225) "hello@jayphelps.com - Austin, Texas\00")
+  (data (i32.const 261) "17 years of professional experience, and 4 years before that as a hobbyist. Experience across a large number of platforms, frameworks, and languages, with a focus on libraries, tooling, and Developer Experience in the last 7 years.\00")
   (data (i32.const 493) "job-company\00")
   (data (i32.const 505) "job-title\00")
   (data (i32.const 515) "job-date\00")
@@ -694,6 +716,12 @@
   (data (i32.const 2299) "June 2017 (part-time) - Feb 2018 (full-time) - Jan 2019\00")
   (data (i32.const 2355) "Senior Software Engineer\00")
   (data (i32.const 2380) "Citadel Securities, LLC\00")
-  (data (i32.const 2404) "May 2019 - Present\00")
-  (data (i32.const 2423) "Core Architecture team. Insights, tools, libraries, infrastructure, Developer Experience.\00")
+  (data (i32.const 2404) "May 2019 - Feb 2020\00")
+  (data (i32.const 2424) "Core Architecture team. Insights, tools, libraries, infrastructure, Developer Experience.\00")
+  (data (i32.const 2514) "Co-founder, VP of Engineering\00")
+  (data (i32.const 2544) "Outsmartly, Inc.\00")
+  (data (i32.const 2561) "March 2019 - Present\00")
+  (data (i32.const 2582) "Lead the engineering team. Lead the creation of an edge-based developer commerce platform. Created 'Edge Slice Re-rendering' US Patent Pending 63/240,274 'Static Analysis Based Edge Slice Re-Rendering For Dynamic Modification Of Content In Webpages'.\00")
+  (data (i32.const 2833) "Edge Slice Re-rendering with Gatsby\00")
+  (data (i32.const 2869) "https://bit.ly/3v7I4b0\00")
 )

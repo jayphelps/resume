@@ -62,7 +62,7 @@ const imports = {
   }
 };
 
-// Safari doesn't support instantiateStreaming
+// Older versions of Safari doesn't support instantiateStreaming
 if (typeof WebAssembly.instantiateStreaming === 'function') {
   WebAssembly.instantiateStreaming(fetch('./main.wasm'), imports)
     .then(result => result.instance.exports.main(), showError);

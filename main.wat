@@ -203,6 +203,15 @@
     (call $Element::appendChild
       (get_local $ol)
       (call $createExperienceItem
+        (get_global $jobCompanyNetflix)
+        (get_global $jobTitleNetflix)
+        (get_global $jobDateNetflix2)
+        (get_global $jobDescNetflix2)
+      )
+    )
+    (call $Element::appendChild
+      (get_local $ol)
+      (call $createExperienceItem
         (get_global $jobCompanyOutsmartly)
         (get_global $jobTitleOutsmartly)
         (get_global $jobDateOutsmartly)
@@ -230,8 +239,8 @@
     (call $Element::appendChild
       (get_local $ol)
       (call $createExperienceItem
-        (get_global $jobCompany2)
-        (get_global $jobTitle2)
+        (get_global $jobCompanyNetflix)
+        (get_global $jobTitleNetflix)
         (get_global $jobDate2)
         (get_global $jobDesc2)
       )
@@ -252,15 +261,6 @@
         (get_global $jobTitle4)
         (get_global $jobDate4)
         (get_global $jobDesc4)
-      )
-    )
-    (call $Element::appendChild
-      (get_local $ol)
-      (call $createExperienceItem
-        (get_global $jobCompany5)
-        (get_global $jobTitle5)
-        (get_global $jobDate5)
-        (get_global $jobDesc5)
       )
     )
     (call $Object::set
@@ -595,8 +595,8 @@
   (global $oldjobTitle1 i32 (i32.const 559))
   (global $oldjobDate1 i32 (i32.const 584))
   (global $jobDesc1 i32 (i32.const 639))
-  (global $jobCompany2 i32 (i32.const 844))
-  (global $jobTitle2 i32 (i32.const 858))
+  (global $jobCompanyNetflix i32 (i32.const 844))
+  (global $jobTitleNetflix i32 (i32.const 858))
   (global $jobDate2 i32 (i32.const 883))
   (global $jobDesc2 i32 (i32.const 904))
   (global $jobCompany3 i32 (i32.const 1165))
@@ -646,6 +646,8 @@
   (global $jobDescOutsmartly i32 (i32.const 2582))
   (global $talkTitle4 i32 (i32.const 2833))
   (global $talkHref4 i32 (i32.const 2869))
+  (global $jobDateNetflix2 i32 (i32.const 2892))
+  (global $jobDescNetflix2 i32 (i32.const 2911))
 
   (data (i32.const 2) "div\00")
   (data (i32.const 6) "a\00")
@@ -720,8 +722,10 @@
   (data (i32.const 2424) "Core Architecture team. Insights, tools, libraries, infrastructure, Developer Experience.\00")
   (data (i32.const 2514) "Co-founder, VP of Engineering\00")
   (data (i32.const 2544) "Outsmartly, Inc.\00")
-  (data (i32.const 2561) "March 2019 - Present\00")
+  (data (i32.const 2561) "Mar 2019 - Jan 2022 \00")
   (data (i32.const 2582) "Lead the engineering team. Lead the creation of an edge-based developer commerce platform. Created 'Edge Slice Re-rendering' US Patent Pending 63/240,274 'Static Analysis Based Edge Slice Re-Rendering For Dynamic Modification Of Content In Webpages'.\00")
   (data (i32.const 2833) "Edge Slice Re-rendering with Gatsby\00")
   (data (i32.const 2869) "https://bit.ly/3v7I4b0\00")
+  (data (i32.const 2892) "Jan 2022 - Present\00")
+  (data (i32.const 2911) "Web Member Platform team.\00")
 )
